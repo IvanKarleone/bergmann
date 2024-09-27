@@ -1,0 +1,13 @@
+<div
+  class="btn-wrapper"
+  [class.disallowed]="isDisallowed()"
+  [matTooltip]="isDisallowed() ? disallowedTooltip() : ''"
+>
+  <button
+    mat-stroked-button
+    [disabled]="isDisallowed()"
+    (click)="clickEvent.emit()"
+  >
+    <ng-content></ng-content>
+  </button>
+</div>
