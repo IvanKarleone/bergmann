@@ -1,9 +1,16 @@
+:root {
+  --main-dark-color: #101414;
+  --main-brand-color: #5effff;
+}
+
 html,
 body {
   height: 100%;
-  background: #101414;
 }
+
 body {
   margin: 0;
+  padding: 20px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: var(--main-dark-color);
 }

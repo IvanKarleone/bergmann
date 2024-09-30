@@ -1,0 +1,14 @@
+.chart-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.chart-form-control-container {
+  display: flex;
+  column-gap: 5px;
+}
+
+.chart-form-control {
+  flex-grow: 1;
+}

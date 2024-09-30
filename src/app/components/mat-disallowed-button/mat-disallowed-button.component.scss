@@ -1,0 +1,16 @@
+:host {
+  display: inline-flex;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-grow: 1;
+
+  &.disallowed {
+    cursor: not-allowed;
+  }
+}
+
+.btn {
+  flex-grow: 1;
+}

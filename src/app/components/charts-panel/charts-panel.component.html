@@ -1,0 +1,30 @@
+<div class="date-filter">
+  <app-mat-date-year-picker
+    [dateYear]="startYear"
+    label="Choose a start date"
+    [max]="endYear()"
+  ></app-mat-date-year-picker>
+
+  <app-mat-date-year-picker
+    [dateYear]="endYear"
+    label="Choose an end date"
+    [min]="startYear()"
+  ></app-mat-date-year-picker>
+
+  <button mat-stroked-button (click)="onResetDateFilter()">
+    Reset date filter
+  </button>
+</div>
+
+<div class="charts">
+  @for (chart of chartService.charts(); track $index) {
+    <div class="chart" [chart]="chart"></div>
+  }
+</div>
+
+<mat-disallowed-button
+  [isDisallowed]="chartService.charts().length === 4"
+  disallowedTooltip="You can`t add more than 4 charts"
+  (clickEvent)="onAddChart()"
+  >Add chart</mat-disallowed-button
+>

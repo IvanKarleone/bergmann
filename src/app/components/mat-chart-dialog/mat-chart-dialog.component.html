@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>Fill chart options</h2>
+<mat-dialog-content>
+  <form class="chart-form" [formGroup]="chartOptionsForm">
+    <div class="chart-form-control-container">
+      <label for="type">Type: </label>
+      <select class="chart-form-control" id="type" name="type" formControlName="type">
+        @for (chartTypesKey of chartTypesKeys; track $index) {
+        <option [value]="chartTypesKey">{{ chartTypes[chartTypesKey] }}</option>
+        }
+      </select>
+    </div>
+    <div class="chart-form-control-container">
+      <label for="color">Color: </label>
+      <input class="chart-form-control" id="color" type="text" formControlName="color" />
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button mat-stroked-button mat-dialog-close (click)="onAddChart()">
+    Add
+  </button>
+  <button mat-stroked-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>

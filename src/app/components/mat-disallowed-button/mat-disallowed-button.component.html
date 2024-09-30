@@ -4,6 +4,7 @@
   [matTooltip]="isDisallowed() ? disallowedTooltip() : ''"
 >
   <button
+    class="btn"
     mat-stroked-button
     [disabled]="isDisallowed()"
     (click)="clickEvent.emit()"
